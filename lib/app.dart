@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helth_io/view/UI/onboading.dart';
 import 'package:helth_io/view/UI/splash_screen.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,7 +18,7 @@ class _MyAppState extends State<MyApp> {
       designSize: Size(360, 640),
     builder: (context, child)=> GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Task Manager',
+      title: 'Health io',
       theme: ThemeData(
           brightness: Brightness.light,
           primaryColor: Colors.blueAccent,
@@ -83,7 +84,7 @@ class _MyAppState extends State<MyApp> {
           )
       ),
       themeMode: ThemeMode.light,
-      home: const Splash_screen(),
+      home: const onboarding(),
     ));
 
 
