@@ -33,7 +33,7 @@ class _Splash_screenState extends State<Splash_screen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    //NavigationtoLogin();
+    NavigationtoLogin();
   }
 
 
