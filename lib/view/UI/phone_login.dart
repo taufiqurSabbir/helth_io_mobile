@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../utils/asset_utils.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:get/get.dart';
 
+import 'OTP_verify.dart';
 class Phone_Login extends StatefulWidget {
   const Phone_Login({super.key});
 
@@ -11,6 +13,7 @@ class Phone_Login extends StatefulWidget {
 }
 
 class _Phone_LoginState extends State<Phone_Login> {
+  TextEditingController PhoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +28,7 @@ class _Phone_LoginState extends State<Phone_Login> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: IntlPhoneField(
+                controller: PhoneController,
                 decoration: InputDecoration(
                   labelText: 'Phone Number',
                   border: OutlineInputBorder(
@@ -41,7 +45,13 @@ class _Phone_LoginState extends State<Phone_Login> {
             SizedBox(
               width: 900.w,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  if(PhoneController.text.length == 10){
+                            Get.to(OTP(PhoneNumber: PhoneController.text,));
+                  }else{
+                    Get.snackbar('Warning','Please Enter Right Phone Number');
+                  }
+                },
                 child: const Text('Login',style: TextStyle(color: Colors.white),),
               ),
             )
