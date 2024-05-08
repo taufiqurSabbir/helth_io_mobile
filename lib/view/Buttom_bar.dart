@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:helth_io/view/UI/medicine.dart';
 import 'package:helth_io/view/UI/my_booking.dart';
 import 'package:helth_io/view/utils/app_color.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'UI/home.dart';
 import 'UI/more.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Buttom_bar extends StatefulWidget {
